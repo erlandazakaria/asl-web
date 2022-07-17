@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  s-asl-web:
+    container_name: c-asl-web
+    build: 
+      context: . 
+    image: asl-web:1.0.0
+    restart: unless-stopped
+    networks:
+      n-antrio: {}
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.r-asl-web.entrypoints=websecure
+      - traefik.http.routers.r-asl-web.rule=Host(`asl.antrio.id`)
+      - traefik.http.routers.r-asl-web.tls=true
+      - traefik.http.routers.r-asl-web.tls.certResolver=lets-encrypt
+
+networks:
+  n-antrio:
+    external: true
+    name: n-antrio

@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3fed5c7f.css",
+    "main.js": "/static/js/main.f23b709d.js",
+    "static/js/787.0c596ea4.chunk.js": "/static/js/787.0c596ea4.chunk.js",
+    "static/media/gambar-atas.png": "/static/media/gambar-atas.fd350fc37065ab7db5e0.png",
+    "static/media/gambar-tengah.png": "/static/media/gambar-tengah.119b54b3bc84b4f24888.png",
+    "static/media/background-bawah.png": "/static/media/background-bawah.1e6a4f91a21c7db9b148.png",
+    "static/media/background-tengah.png": "/static/media/background-tengah.004086d9220ec02996e5.png",
+    "static/media/icon-1.png": "/static/media/icon-1.e7d52f5473d9374fdc59.png",
+    "static/media/icon-4.png": "/static/media/icon-4.aceb6a3bc7ce7ae0d3c4.png",
+    "static/media/icon-5.png": "/static/media/icon-5.73317430a67d0029ff4c.png",
+    "static/media/icon-2.png": "/static/media/icon-2.14e8577fae424249ef35.png",
+    "static/media/icon-3.png": "/static/media/icon-3.1858ed4fe10099f30c71.png",
+    "static/media/icon-6.png": "/static/media/icon-6.3382ef2a4e98b118fb9a.png",
+    "index.html": "/index.html",
+    "main.3fed5c7f.css.map": "/static/css/main.3fed5c7f.css.map",
+    "main.f23b709d.js.map": "/static/js/main.f23b709d.js.map",
+    "787.0c596ea4.chunk.js.map": "/static/js/787.0c596ea4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fed5c7f.css",
+    "static/js/main.f23b709d.js"
+  ]
+}
