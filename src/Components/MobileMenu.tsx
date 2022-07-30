@@ -1,4 +1,6 @@
 import { MouseEvent, useState } from 'react';
+import { useNavigate } from "react-router-dom";
+
 import Box from '@mui/material/Box';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -6,6 +8,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function MobileMenu() {
+  const navigate = useNavigate();
+
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -36,10 +40,10 @@ export default function MobileMenu() {
           'aria-labelledby': 'mobile-menu-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Home</MenuItem>
-        <MenuItem onClick={handleClose}>Service</MenuItem>
-        <MenuItem onClick={handleClose}>About Us</MenuItem>
-        <MenuItem onClick={handleClose}>Contact Us</MenuItem>
+        <MenuItem onClick={() => {navigate("/"); handleClose()}}>Home</MenuItem>
+        <MenuItem onClick={() => {navigate("/service"); handleClose()}}>Service</MenuItem>
+        <MenuItem onClick={() => {navigate("/about-us"); handleClose()}}>About Us</MenuItem>
+        <MenuItem onClick={() => {navigate("/contact-us"); handleClose()}}>Contact Us</MenuItem>
       </Menu>
     </Box>
   );
