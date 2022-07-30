@@ -1,5 +1,5 @@
 import { MouseEvent, useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useMatch } from "react-router-dom";
 
 import Box from '@mui/material/Box';
 import Menu from '@mui/material/Menu';
@@ -9,6 +9,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function MobileMenu() {
   const navigate = useNavigate();
+  const isHome = useMatch("/");
+  const isService = useMatch("/service");
+  const isAboutUs = useMatch("/about-us");
+  const isContactUs = useMatch("/contact-us");
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -40,10 +44,22 @@ export default function MobileMenu() {
           'aria-labelledby': 'mobile-menu-button',
         }}
       >
-        <MenuItem onClick={() => {navigate("/"); handleClose()}}>Home</MenuItem>
-        <MenuItem onClick={() => {navigate("/service"); handleClose()}}>Service</MenuItem>
-        <MenuItem onClick={() => {navigate("/about-us"); handleClose()}}>About Us</MenuItem>
-        <MenuItem onClick={() => {navigate("/contact-us"); handleClose()}}>Contact Us</MenuItem>
+        <MenuItem 
+          onClick={() => {navigate("/"); handleClose()}}
+          sx={[isHome && {backgroundColor: "#0e424d", color: "white"}]}
+        >Home</MenuItem>
+        <MenuItem 
+          onClick={() => {navigate("/service"); handleClose()}}
+          sx={[isService && {backgroundColor: "#0e424d", color: "white"}]}
+        >Service</MenuItem>
+        <MenuItem 
+          onClick={() => {navigate("/about-us"); handleClose()}}
+          sx={[isAboutUs && {backgroundColor: "#0e424d", color: "white"}]}
+        >About Us</MenuItem>
+        <MenuItem 
+          onClick={() => {navigate("/contact-us"); handleClose()}}
+          sx={[isContactUs && {backgroundColor: "#0e424d", color: "white"}]}
+        >Contact Us</MenuItem>
       </Menu>
     </Box>
   );

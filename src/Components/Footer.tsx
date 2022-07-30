@@ -51,16 +51,16 @@ export default function Footer() {
             <Box mb={2} sx={{fontSize: 26, fontWeight: "500", color: "#13596c"}} onMouseDown={() => navigate("/")}>
               Site Navigation
             </Box>
-            <Box mb={0} sx={{fontSize: 17, color: "#13596c"}} onMouseDown={() => navigate("/")}>
+            <Box mb={0} sx={{fontSize: 17, color: "#13596c", cursor: "pointer"}} onMouseDown={() => navigate("/")}>
               Home
             </Box>
-            <Box mb={0} sx={{fontSize: 17, color: "#13596c"}} onMouseDown={() => navigate("/service")}>
+            <Box mb={0} sx={{fontSize: 17, color: "#13596c", cursor: "pointer"}} onMouseDown={() => navigate("/service")}>
               Service
             </Box>
-            <Box mb={0} sx={{fontSize: 17, color: "#13596c"}} onMouseDown={() => navigate("/about-us")}>
+            <Box mb={0} sx={{fontSize: 17, color: "#13596c", cursor: "pointer"}} onMouseDown={() => navigate("/about-us")}>
               About Us
             </Box>
-            <Box mb={0} sx={{fontSize: 17, color: "#13596c"}} onMouseDown={() => navigate("/contact-us")}>
+            <Box mb={0} sx={{fontSize: 17, color: "#13596c", cursor: "pointer"}} onMouseDown={() => navigate("/contact-us")}>
               Contact Us
             </Box>
           </Box>
