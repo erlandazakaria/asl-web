@@ -1,15 +1,12 @@
 import Container from "@mui/material/Container/";
 import Box from "@mui/material/Box";
 
-import MapASL from "../Assets/map.png";
-
 export default function Map() {
 
   return (
       <Container maxWidth="lg" sx={{padding: "0px !important", width: "100%", height:"100%", color: "#0b2e38"}}>
         <Box width="100%" height="100%" pt={4} ml={4} pb={4} sx={{boxSizing: "border-box", pr:{xs: 9, md: 20}}}>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15827.618267208618!2d112.7324402!3d-7.3645936!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4920623739c23e96!2sPT.%20Angkasa%20Segara%20Logistik!5e0!3m2!1sen!2sid!4v1659156272202!5m2!1sen!2sid" width="100%" height="450" style={{border: 0}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-          {/* <img src={MapASL} alt="Map" width="100%" /> */}
+          <iframe title="Google Map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15827.618267208618!2d112.7324402!3d-7.3645936!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4920623739c23e96!2sPT.%20Angkasa%20Segara%20Logistik!5e0!3m2!1sen!2sid!4v1659156272202!5m2!1sen!2sid" width="100%" height="450" style={{border: 0}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </Box>
         <Box ml={4} sx={{fontSize: 26, fontWeight: "500"}}>
           PT. Angkasa Segara Logistik
