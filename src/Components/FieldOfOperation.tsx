@@ -2,7 +2,6 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
-import BackgroundBawah from "../Assets/background-bawah.png";
 import International from "../Assets/international.png";
 import InlandTrucking from "../Assets/inland-trucking.png";
 import Warehousing from "../Assets/warehousing.png";
