@@ -1,12 +1,15 @@
+import { Routes, Route } from "react-router-dom";
 import Container from "@mui/material/Container/";
 import Grid from "@mui/material/Grid";
-import Copyright from "./Components/Copyright";
-import Footer from "./Components/Footer";
+
+import Home from "./Pages/Home";
+import Service from "./Pages/Service";
+import ContactUs from "./Pages/ContactUs";
+import AboutUs from "./Pages/AboutUs";
 
 import Header from "./Components/Header";
-import Introduction from "./Components/Introduction";
-import Picture from "./Components/Picture";
-import Service from "./Components/Service";
+import Copyright from "./Components/Copyright";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -16,21 +19,21 @@ function App() {
         <Header />
       </Grid>
     </Container>
-    <Container maxWidth={false} sx={{width: "100%", height: "520px", padding: "0px !important", zIndex: 2}}>
-      <Grid width="100%" height="100%" sx={{backgroundColor: "#e2f1fd"}}>
-        <Picture />
-      </Grid>
-    </Container>
-    <Container maxWidth={false} sx={{width: "100%", height: "auto", padding: "0px !important", overflow: "hidden"}}>
-      <Grid width="100%" height="100%" sx={{backgroundColor: "#13596c"}}>
-        <Introduction />
-      </Grid>
-    </Container>
-    <Container maxWidth={false} sx={{width: "100%", height: "auto", padding: "0px !important", overflow: "hidden"}}>
-      <Grid width="100%" height="100%" sx={{backgroundColor: "#e2f1fd"}}>
-        <Service />
-      </Grid>
-    </Container>
+    
+    {/* CONTENT */}
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+    <Routes>
+      <Route path="/service" element={<Service />} />
+    </Routes>
+    <Routes>
+      <Route path="/contact-us" element={<ContactUs />} />
+    </Routes>
+    <Routes>
+      <Route path="/about-us" element={<AboutUs />} />
+    </Routes>
+
     <Container maxWidth={false} sx={{width: "100%", height: "auto", padding: "0px !important", overflow: "hidden"}}>
       <Grid width="100%" height="100%" sx={{backgroundColor: "#e5e5e5"}}>
         <Footer />

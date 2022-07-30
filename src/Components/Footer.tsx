@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 import Container from "@mui/material/Container/";
 import Box from "@mui/material/Box";
 
 export default function Footer() {
+  const navigate = useNavigate();
 
   return (
       <Container maxWidth="lg" sx={{padding: "0px !important", width: "100%", height:"100%"}}>
@@ -45,19 +48,19 @@ export default function Footer() {
             </Box>
           </Box>
           <Box m={4} sx={{textAlign: {xs: "center", md: "right"}}}>
-            <Box mb={2} sx={{fontSize: 26, fontWeight: "500", color: "#13596c"}}>
+            <Box mb={2} sx={{fontSize: 26, fontWeight: "500", color: "#13596c"}} onMouseDown={() => navigate("/")}>
               Site Navigation
             </Box>
-            <Box mb={0} sx={{fontSize: 17, color: "#13596c"}}>
+            <Box mb={0} sx={{fontSize: 17, color: "#13596c"}} onMouseDown={() => navigate("/")}>
               Home
             </Box>
-            <Box mb={0} sx={{fontSize: 17, color: "#13596c"}}>
+            <Box mb={0} sx={{fontSize: 17, color: "#13596c"}} onMouseDown={() => navigate("/service")}>
               Service
             </Box>
-            <Box mb={0} sx={{fontSize: 17, color: "#13596c"}}>
+            <Box mb={0} sx={{fontSize: 17, color: "#13596c"}} onMouseDown={() => navigate("/about-us")}>
               About Us
             </Box>
-            <Box mb={0} sx={{fontSize: 17, color: "#13596c"}}>
+            <Box mb={0} sx={{fontSize: 17, color: "#13596c"}} onMouseDown={() => navigate("/contact-us")}>
               Contact Us
             </Box>
           </Box>
