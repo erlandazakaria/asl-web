@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3fed5c7f.css",
-    "main.js": "/static/js/main.1d19936f.js",
+    "main.js": "/static/js/main.f78076c7.js",
     "static/js/787.0c596ea4.chunk.js": "/static/js/787.0c596ea4.chunk.js",
     "static/media/gambar-atas.png": "/static/media/gambar-atas.fd350fc37065ab7db5e0.png",
     "static/media/service-customer-benefits.png": "/static/media/service-customer-benefits.4cfb1ff1b8eb7f3ccc65.png",
@@ -25,11 +25,11 @@
     "static/media/icon-6.png": "/static/media/icon-6.3382ef2a4e98b118fb9a.png",
     "index.html": "/index.html",
     "main.3fed5c7f.css.map": "/static/css/main.3fed5c7f.css.map",
-    "main.1d19936f.js.map": "/static/js/main.1d19936f.js.map",
+    "main.f78076c7.js.map": "/static/js/main.f78076c7.js.map",
     "787.0c596ea4.chunk.js.map": "/static/js/787.0c596ea4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3fed5c7f.css",
-    "static/js/main.1d19936f.js"
+    "static/js/main.f78076c7.js"
   ]
 }
