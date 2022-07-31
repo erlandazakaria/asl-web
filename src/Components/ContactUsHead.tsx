@@ -1,19 +1,31 @@
 import { useState } from "react";
+import axios from "axios";
 
-import Container from "@mui/material/Container/";
+import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
+import { useToast } from "../Contexts/Toast";
+
 export default function ContactUsHead() {
+  const { openToast } = useToast();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
   const onSubmit = () => {
-    console.log("name", name);
-    console.log("email", email);
-    console.log("message", message);
+    axios.post(`${process.env.REACT_APP_SERVER_URL}/asl-message`, {
+      name, email, message
+    }).then((result) => {
+      openToast(result.data.message);
+      setName(""); 
+      setEmail("");
+      setMessage("");
+    }).catch(error => {
+      openToast(error.response.data.message)
+    });
   }
 
   return (
@@ -46,6 +58,7 @@ export default function ContactUsHead() {
                     sx={{backgroundColor: "white"}}
                     fullWidth={true}
                     size="small" 
+                    value={name}
                     onChange={(e) => setName(e.target.value)}
                   />
                 </Box>
@@ -55,6 +68,7 @@ export default function ContactUsHead() {
                     sx={{backgroundColor: "white"}} 
                     fullWidth={true}
                     size="small" 
+                    value={email}
                     onChange={(e) => setEmail(e.target.value)} 
                   />
                 </Box>
@@ -70,6 +84,7 @@ export default function ContactUsHead() {
                       onChange={(e) => setMessage(e.target.value)}
                       multiline={true}
                       minRows={10}
+                      value={message}
                     />
                   </Box>
                   <Box my={1} sx={{pr: {xs: 8, md: 20}}} textAlign="right">
