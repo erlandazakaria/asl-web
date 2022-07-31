@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.3fed5c7f.css",
-    "main.js": "/static/js/main.f78076c7.js",
+    "main.js": "/static/js/main.1defb909.js",
     "static/js/787.0c596ea4.chunk.js": "/static/js/787.0c596ea4.chunk.js",
     "static/media/gambar-atas.png": "/static/media/gambar-atas.fd350fc37065ab7db5e0.png",
     "static/media/service-customer-benefits.png": "/static/media/service-customer-benefits.4cfb1ff1b8eb7f3ccc65.png",
     "static/media/gambar-tengah.png": "/static/media/gambar-tengah.119b54b3bc84b4f24888.png",
+    "static/media/vision2.png": "/static/media/vision2.68248078907840b4fe37.png",
     "static/media/background-bawah.png": "/static/media/background-bawah.1e6a4f91a21c7db9b148.png",
     "static/media/tug.png": "/static/media/tug.ab234f8028e672f90d25.png",
     "static/media/inland-service.png": "/static/media/inland-service.262da65f9aa1a1b25892.png",
@@ -17,6 +18,7 @@
     "static/media/door-to-door.png": "/static/media/door-to-door.cbf1380bfe3ed84299de.png",
     "static/media/inland-trucking.png": "/static/media/inland-trucking.90fae200f95e5708e243.png",
     "static/media/international.png": "/static/media/international.098d6a1dfb05516135be.png",
+    "static/media/map-background.png": "/static/media/map-background.7d77bbbbb1bfa21434e3.png",
     "static/media/icon-1.png": "/static/media/icon-1.e7d52f5473d9374fdc59.png",
     "static/media/icon-4.png": "/static/media/icon-4.aceb6a3bc7ce7ae0d3c4.png",
     "static/media/icon-5.png": "/static/media/icon-5.73317430a67d0029ff4c.png",
@@ -25,11 +27,11 @@
     "static/media/icon-6.png": "/static/media/icon-6.3382ef2a4e98b118fb9a.png",
     "index.html": "/index.html",
     "main.3fed5c7f.css.map": "/static/css/main.3fed5c7f.css.map",
-    "main.f78076c7.js.map": "/static/js/main.f78076c7.js.map",
+    "main.1defb909.js.map": "/static/js/main.1defb909.js.map",
     "787.0c596ea4.chunk.js.map": "/static/js/787.0c596ea4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3fed5c7f.css",
-    "static/js/main.f78076c7.js"
+    "static/js/main.1defb909.js"
   ]
 }
