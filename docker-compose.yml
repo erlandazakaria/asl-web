@@ -12,7 +12,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.routers.r-asl-web.entrypoints=websecure
-      - traefik.http.routers.r-asl-web.rule=Host(`asl.antrio.id`)
+      - traefik.http.routers.r-asl-web.rule=Host(`aslog.co.id`)
       - traefik.http.routers.r-asl-web.tls=true
       - traefik.http.routers.r-asl-web.tls.certResolver=lets-encrypt
 
