@@ -1,22 +1,22 @@
-version: '3.9'
+version: '3.7'
 
 services:
-  s-asl-web:
-    container_name: c-asl-web
+  s-asl:
+    container_name: c-asl
     build: 
       context: . 
-    image: asl-web:1.0.0
+    image: asl:1.0.0
     restart: unless-stopped
     networks:
-      n-antrio: {}
+      n-mkn: {}
     labels:
       - traefik.enable=true
-      - traefik.http.routers.r-asl-web.entrypoints=websecure
-      - traefik.http.routers.r-asl-web.rule=Host(`aslog.co.id`)
-      - traefik.http.routers.r-asl-web.tls=true
-      - traefik.http.routers.r-asl-web.tls.certResolver=lets-encrypt
+      - traefik.http.routers.r-asl.entrypoints=e-secure
+      - traefik.http.routers.r-asl.rule=Host(`aslog.co.id`)
+      - traefik.http.routers.r-asl.tls=true
+      - traefik.http.routers.r-asl.tls.certResolver=lets-encrypt
 
 networks:
-  n-antrio:
+  n-mkn:
     external: true
-    name: n-antrio
+    name: n-mkn
