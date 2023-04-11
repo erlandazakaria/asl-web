@@ -16,7 +16,7 @@ export default function ContactUsHead() {
   const [message, setMessage] = useState("");
 
   const onSubmit = () => {
-    axios.post(`${process.env.REACT_APP_SERVER_URL}/asl-message`, {
+    axios.post(`${process.env.REACT_APP_SERVER_URL}/asl/message`, {
       name, email, message
     }).then((result) => {
       openToast(result.data.message);
