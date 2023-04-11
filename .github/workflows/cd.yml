@@ -3,7 +3,7 @@ name: CRA Deployment VPS CD
 on:
   push:
     branches:
-      - deploy
+      - main
 
 jobs:
   build:
