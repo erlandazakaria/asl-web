@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(gh repo view:*)"
+      "Bash(gh repo view:*)",
+      "Bash(git checkout:*)",
+      "Bash(cp:*)",
+      "Bash(node --version:*)",
+      "Bash(npm --version:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nRefactor to Next.js 15 with Tailwind CSS\n\n- Migrate from Create React App to Next.js 15\n- Replace Material-UI with Tailwind CSS\n- Implement static site generation for GitHub Pages\n- Add SEO-friendly metadata for all pages\n- Exclude Excel page as requested\n- Maintain all existing pages: Home, Service, About Us, Contact Us\n- Configure GitHub Pages deployment with proper routing\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []
