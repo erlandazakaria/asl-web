@@ -6,30 +6,11 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-import { useToast } from "../Contexts/Toast";
-
 export default function ContactUsHead() {
-  const { openToast } = useToast();
-
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const onSubmit = () => {
-    axios.post(`${process.env.REACT_APP_SERVER_URL}/asl/message`, {
-      name, email, message
-    }).then((result) => {
-      openToast(result.data.message);
-      setName(""); 
-      setEmail("");
-      setMessage("");
-    }).catch(error => {
-      openToast(error.response.data.message)
-    });
-  }
 
   return (
       <Container maxWidth="lg" sx={{padding: "0px !important", width: "100%", height:"100%", position: "relative"}}>
+        <form action="https://api.web3forms.com/submit" method="POST">
         <Box position="absolute" width={350} height={85} sx={{backgroundColor: "#0b2e38", zIndex: 1}}></Box>
         <Box 
           display="flex"
@@ -41,6 +22,7 @@ export default function ContactUsHead() {
             alignItems: "center"
           }}>
           <Box m={4} sx={{zIndex: 2}} width="100%">
+            <input type="hidden" name="access_key" value="69f8a533-d1b0-49b5-b17d-ffed6b9a401b" />
             <Box px={2} mb={6} sx={{fontSize: 31, color: "white"}}>
               Contact Us
             </Box>
@@ -57,9 +39,9 @@ export default function ContactUsHead() {
                   <TextField 
                     sx={{backgroundColor: "white"}}
                     fullWidth={true}
+                    name="name"
                     size="small" 
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    required
                   />
                 </Box>
                 <Box>Your Email*</Box>
@@ -67,9 +49,9 @@ export default function ContactUsHead() {
                   <TextField 
                     sx={{backgroundColor: "white"}} 
                     fullWidth={true}
+                    name="email"
                     size="small" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)} 
+                    required
                   />
                 </Box>
               </Box>
@@ -80,18 +62,17 @@ export default function ContactUsHead() {
                     <TextField 
                       sx={{backgroundColor: "white"}} 
                       fullWidth={true}
-                      size="small" 
-                      onChange={(e) => setMessage(e.target.value)}
+                      name="message"
+                      size="small"
                       multiline={true}
                       minRows={10}
-                      value={message}
                     />
                   </Box>
                   <Box my={1} sx={{pr: {xs: 8, md: 20}}} textAlign="right">
                     <Button
                       sx={{width: 120, backgroundColor: "#d5820c"}}
                       variant="contained"
-                      onClick={onSubmit}
+                      type="submit"
                     >Submit</Button>
                   </Box>
                 </Box>
@@ -99,6 +80,7 @@ export default function ContactUsHead() {
             </Box>
           </Box>
         </Box>
+        </form>
       </Container>
   );
 };
