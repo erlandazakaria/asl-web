@@ -2,7 +2,7 @@
   "name": "asl-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aslog.co.id",
+  "homepage": "https://erlandazakaria.github.io/asl-web",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
