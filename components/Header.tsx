@@ -17,7 +17,17 @@ export default function Header() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const isActive = (path: string) => pathname === path;
+  // Normalize pathname by removing trailing slash for comparison
+  const normalizedPathname = pathname?.endsWith('/') && pathname !== '/'
+    ? pathname.slice(0, -1)
+    : pathname;
+
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return normalizedPathname === '/';
+    }
+    return normalizedPathname === path;
+  };
 
   const menuItems = [
     { path: '/', label: 'Home' },
