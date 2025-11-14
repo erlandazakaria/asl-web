@@ -26,16 +26,24 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          USE_CUSTOM_DOMAIN: ${{ secrets.USE_CUSTOM_DOMAIN || 'false' }}
 
-      - name: Create deployment directory
+      - name: Create deployment directory (subdirectory mode)
+        if: ${{ secrets.USE_CUSTOM_DOMAIN != 'true' }}
         run: |
           mkdir -p deploy/asl-web
           cp -r out/* deploy/asl-web/
           echo '<meta http-equiv="refresh" content="0; url=/asl-web/">' > deploy/index.html
+
+      - name: Create deployment directory (custom domain mode)
+        if: ${{ secrets.USE_CUSTOM_DOMAIN == 'true' }}
+        run: |
+          mkdir -p deploy
+          cp -r out/* deploy/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./deploy
-          cname: false
+          cname: ${{ secrets.CUSTOM_DOMAIN_NAME || '' }}
