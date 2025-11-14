@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/config';
 
 export default function ServiceHead() {
   return (
@@ -6,7 +7,7 @@ export default function ServiceHead() {
       <div className="absolute w-[350px] h-[85px] bg-[#0b2e38] z-10"></div>
       <div className="absolute -right-[400px] -top-[150px] z-0">
         <Image
-          src="/background-bawah.png"
+          src={getAssetPath('/background-bawah.png')}
           alt="bot-background"
           width={400}
           height={400}

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/config';
 
 export default function Picture() {
   return (
@@ -6,7 +7,7 @@ export default function Picture() {
       <div className="flex items-center justify-center w-full h-full">
         <div className="w-full h-full overflow-hidden">
           <Image
-            src="/gambar-atas.png"
+            src={getAssetPath('/gambar-atas.png')}
             alt="top-desc"
             width={1200}
             height={520}

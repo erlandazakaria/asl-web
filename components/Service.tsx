@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/config';
 
 export default function Service() {
   const services = [
@@ -39,7 +40,7 @@ export default function Service() {
       <div className="absolute w-[250px] h-[85px] bg-[#0b2e38] z-10"></div>
       <div className="absolute -right-[300px] -top-[180px] z-0">
         <Image
-          src="/background-bawah.png"
+          src={getAssetPath('/background-bawah.png')}
           alt="bot-background"
           width={400}
           height={400}
@@ -63,7 +64,7 @@ export default function Service() {
             >
               <div className="relative mb-2 w-[120px] h-[120px] bg-[#5ea3b5] rounded-3xl">
                 <Image
-                  src={service.icon}
+                  src={getAssetPath(service.icon)}
                   alt={`icon-${index + 1}`}
                   width={service.width}
                   height={service.width}

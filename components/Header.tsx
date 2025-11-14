@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/config';
 
 export default function Header() {
   const pathname = usePathname();
@@ -42,7 +43,7 @@ export default function Header() {
         <div className="w-1/2 md:w-2/5 lg:w-1/2 pl-4">
           <Link href="/">
             <Image
-              src="/logo.png"
+              src={getAssetPath('/logo.png')}
               alt="logo"
               width={200}
               height={60}

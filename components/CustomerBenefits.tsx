@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/config';
 
 export default function CustomerBenefits() {
   return (
@@ -6,7 +7,7 @@ export default function CustomerBenefits() {
       <div className="absolute w-[350px] h-[85px] bg-[#0b2e38] z-10"></div>
       <div className="absolute right-[-100px] md:right-[-100px] lg:right-[-200px] xl:right-[-400px] -top-[60px] z-0">
         <Image
-          src="/service-customer-benefits.png"
+          src={getAssetPath('/service-customer-benefits.png')}
           alt="customer-benefit-background"
           width={400}
           height={400}

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getAssetPath } from '@/lib/config';
 
 export default function Introduction() {
   return (
@@ -7,7 +8,7 @@ export default function Introduction() {
       <div className="absolute w-[250px] h-[85px] bg-[#0b2e38] z-10"></div>
       <div className="absolute -left-[200px] -top-[10px] z-0">
         <Image
-          src="/background-tengah.png"
+          src={getAssetPath('/background-tengah.png')}
           alt="mid-background"
           width={400}
           height={400}
@@ -32,7 +33,7 @@ export default function Introduction() {
         </div>
         <div className="m-8">
           <Image
-            src="/gambar-tengah.png"
+            src={getAssetPath('/gambar-tengah.png')}
             alt="mid-desc"
             width={400}
             height={300}
