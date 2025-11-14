@@ -31,6 +31,7 @@ jobs:
         run: |
           mkdir -p deploy/asl-web
           cp -r out/* deploy/asl-web/
+          echo '<meta http-equiv="refresh" content="0; url=/asl-web/">' > deploy/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
