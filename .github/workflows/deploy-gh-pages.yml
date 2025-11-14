@@ -27,9 +27,14 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Create deployment directory
+        run: |
+          mkdir -p deploy/asl-web
+          cp -r out/* deploy/asl-web/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
+          publish_dir: ./deploy
           cname: false
