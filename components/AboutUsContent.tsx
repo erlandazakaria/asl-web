@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/config';
 
 export default function AboutUsContent() {
   return (
@@ -9,7 +10,7 @@ export default function AboutUsContent() {
           <div className="px-0 m-8 text-[31px] text-white">About Us</div>
           <div
             className="m-8 bg-no-repeat"
-            style={{ backgroundImage: 'url(/map-background.png)' }}
+            style={{ backgroundImage: `url(${getAssetPath('/map-background.png')})` }}
           >
             <div className="mt-8 mb-6 text-[23px] text-[#0b2e37] font-medium text-justify mr-0 md:mr-0">
               PT. Angkasa Segara Logistik was founded to answer the needs of
@@ -41,7 +42,7 @@ export default function AboutUsContent() {
             </div>
             <div className="h-auto lg:h-[150px] w-full flex justify-end items-end">
               <Image
-                src="/about-us-bottom.png"
+                src={getAssetPath('/about-us-bottom.png')}
                 alt="About us decoration"
                 width={300}
                 height={200}

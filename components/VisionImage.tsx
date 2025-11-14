@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/config';
 
 export function VisionImage() {
   return (
     <div className="max-w-7xl mx-auto w-full h-full relative">
       <div className="flex flex-col justify-center items-center w-full h-full">
         <Image
-          src="/vision2.png"
+          src={getAssetPath('/vision2.png')}
           alt="Vision"
           width={1200}
           height={240}

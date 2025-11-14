@@ -27,14 +27,11 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Create deployment directory
-        run: |
-          mkdir -p deploy
-          cp -r out/* deploy/
-          cp -r out deploy/asl-web
+      - name: Add .nojekyll file
+        run: touch out/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./deploy
+          publish_dir: ./out
