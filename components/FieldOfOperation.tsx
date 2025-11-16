@@ -1,19 +1,20 @@
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/config';
 
 export default function FieldOfOperation() {
   const operations = [
     {
-      image: '/international.png',
+      image: getAssetPath('/international.png'),
       title: 'International Sea and Air Freight Forwarding',
     },
-    { image: '/inland-trucking.png', title: 'Inland Trucking' },
-    { image: '/warehousing.png', title: 'Warehousing and Customs Clearance' },
-    { image: '/distribution.png', title: 'Distribution' },
-    { image: '/customs.png', title: 'Customs Brokerage' },
-    { image: '/door-to-door.png', title: 'Door to Door Service' },
-    { image: '/tug.png', title: 'Tug and Barge Operation' },
-    { image: '/inland-service.png', title: 'Inland Service' },
-    { image: '/intercity.png', title: 'Intercity Railways Transport' },
+    { image: getAssetPath('/inland-trucking.png'), title: 'Inland Trucking' },
+    { image: getAssetPath('/warehousing.png'), title: 'Warehousing and Customs Clearance' },
+    { image: getAssetPath('/distribution.png'), title: 'Distribution' },
+    { image: getAssetPath('/customs.png'), title: 'Customs Brokerage' },
+    { image: getAssetPath('/door-to-door.png'), title: 'Door to Door Service' },
+    { image: getAssetPath('/tug.png'), title: 'Tug and Barge Operation' },
+    { image: getAssetPath('/inland-service.png'), title: 'Inland Service' },
+    { image: getAssetPath('/intercity.png'), title: 'Intercity Railways Transport' },
   ];
 
   return (
