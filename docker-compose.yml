@@ -8,7 +8,7 @@ services:
     image: asl:1.0.0
     restart: unless-stopped
     networks:
-      n-mkn: {}
+      n-erl: {}
     labels:
       - traefik.enable=true
       - traefik.http.routers.r-asl.entrypoints=e-secure
@@ -17,6 +17,6 @@ services:
       - traefik.http.routers.r-asl.tls.certResolver=lets-encrypt
 
 networks:
-  n-mkn:
+  n-erl:
     external: true
-    name: n-mkn
+    name: n-erl
